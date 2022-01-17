@@ -109,6 +109,10 @@ export default {
 
     .start{
         padding: 0 375px;
+
+        .banner{
+            height: 500px;
+        }
     }
     .single_info_wrapper{
         background-color: #f2f6fb;

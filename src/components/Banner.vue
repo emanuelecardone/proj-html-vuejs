@@ -9,7 +9,7 @@
                 </p>
                 <Button :type="'text'" :text="content.btnText" />
             </div>
-            <div v-if="type === 'start'" class="img_section w_40 h-100">
+            <div v-if="type === 'start'" class="img_section h-100">
                 <StartImg :sources="content.imgSrc" />
             </div>
         </div>
@@ -57,7 +57,8 @@ export default {
             }
         }
         .img_section{
-
+            width: 603px;
+            
             img{
                 top: 50%;
                 left: 0;

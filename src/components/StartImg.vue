@@ -26,25 +26,25 @@ export default {
                 transform: translateY(-50%);
             }
             &.moon{
-                top: 27%;
-                left: 23%;
+                top: 25%;
+                left: 20%;
                 filter: grayscale(100%) brightness(1.1);
             }
             &.book1{
                 top: 25%;
-                left: 83%;
+                left: 70%;
             }
             &.book2{
                 top: 58%;
-                left: 50%;
+                left: 40%;
             }
             &.bubblespeech{
                 top: 15%;
-                left: 110%;
+                left: 92.5%;
             }
             &.magnifier{
                 top: 67%;
-                left: 103%;
+                left: 85%;
             }
         }
     }
