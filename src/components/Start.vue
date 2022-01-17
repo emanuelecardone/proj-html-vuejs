@@ -9,8 +9,8 @@
             </div>
         </div>
         <div class="images_wrapper text-capitalize">
-            <div class="images_wrapper_left d-flex flex-column flex-wrap align-items-start position-relative mb_30">
-                <div v-for="image,index in images.left" :key="index" :class="{'align-self-end': index > 0, 'position-absolute right-0 bottom-0': index === 2}">
+            <div class="images_wrapper_up d-flex flex-column flex-wrap align-items-start position-relative mb_30">
+                <div v-for="image,index in images.up" :key="index" :class="{'align-self-end': index > 0, 'position-absolute right-0 bottom-0': index === 2}">
                     <img :src="require('../assets/img/' + image.src + '.jpg')" :alt="'Immagine di ' + image.title">
                     <div class="titles_img d-flex justify-content-between align-items-center my-1">
                         <span class="image_title fs-5">{{image.title}}</span>
@@ -18,8 +18,8 @@
                     </div>
                 </div>
             </div>
-            <div class="images_wrapper_right d-flex justify-content-between">
-                <div v-for="image,index in images.right" :key="index">
+            <div class="images_wrapper_down d-flex justify-content-between">
+                <div v-for="image,index in images.down" :key="index">
                     <img :src="require('../assets/img/' + image.src + '.jpg')" :alt="'Immagine di ' + image.title">
                     <div class="titles_img d-flex justify-content-between align-items-center my-1">
                         <span class="image_title fs-5">{{image.title}}</span>
@@ -64,24 +64,12 @@ export default {
             ],
             // Oggetto con src e test delle immagini
             images: {
-                left: [
+                up: [
                     {
                         src: 'cat_1-770x375',
                         title: 'software development',
                         subtitle: '5 courses'
                     },
-                    {
-                        src: 'cat_5-370x155',
-                        title: 'music',
-                        subtitle: '5 courses'
-                    },
-                    {
-                        src: 'cat_4-370x155',
-                        title: 'exercise',
-                        subtitle: '7 courses'
-                    }
-                ],
-                right: [
                     {
                         src: 'cat_2-370x155',
                         title: 'art',
@@ -91,6 +79,18 @@ export default {
                         src: 'cat_3-370x155',
                         title: 'material design',
                         subtitle: '5 courses'
+                    }
+                ],
+                down: [
+                    {
+                        src: 'cat_4-370x155',
+                        title: 'music',
+                        subtitle: '5 courses'
+                    },
+                    {
+                        src: 'cat_5-370x155',
+                        title: 'exercise',
+                        subtitle: '7 courses'
                     },
                     {
                         src: 'cat_6-370x155',
@@ -133,11 +133,7 @@ export default {
     .image_subtitle{
         color: $tertiary_color;
     }
-    .images_wrapper_left{
+    .images_wrapper_up{
         max-height: 415px;
-
-        .last_img{
-            justify-self: flex-end;
-        }
     }
 </style>
