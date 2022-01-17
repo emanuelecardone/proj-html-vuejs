@@ -1,6 +1,6 @@
 <template>
     <section class="start">
-        <Banner />
+        <Banner :type="'start'" :content="bannerData" />
     </section>
 </template>
 
@@ -11,6 +11,9 @@ export default {
     name: 'Start',
     components: {
         Banner
+    },
+    props: {
+        bannerData: Object
     }    
 }
 </script>
