@@ -1,11 +1,15 @@
 <template>
-    <a href="#" class="btn page_btn"></a>
+    <a href="#" class="btn page_btn d-flex justify-content-center align-items-center">
+        <span v-if="type === 'text'">{{text}}</span>
+        <i v-else class="fas fa-search"></i>
+    </a>
 </template>
 
 <script>
 export default {
     name: 'Button',
     props: {
+        type: String,
         text: String
     }    
 }

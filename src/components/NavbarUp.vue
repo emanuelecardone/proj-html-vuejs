@@ -44,7 +44,7 @@ export default {
 
     .navbar.up{
         
-        height: 80px;
+        height: 70px;
         border-bottom: 3px solid #e4e8ed;
 
         a{
