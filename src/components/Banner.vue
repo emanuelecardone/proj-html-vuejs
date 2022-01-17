@@ -1,6 +1,6 @@
 <template>
-    <div class="banner w-100 h_500p">
-        <div class="banner_subwrapper d-flex justify-content-center align-items-center position-relative">
+    <div class="banner w-100">
+        <div class="banner_subwrapper w-100 h-100 d-flex justify-content-center align-items-center position-relative">
             <div class="text_section d-flex flex-column align-items-start" :class="{'w_60': type === 'start', 'w-50 learning position-absolute': type === 'learning'}">
                 <h1 v-if="type === 'start'">{{content.title}}</h1>
                 <h2 v-else class="fs_40">{{content.title}}</h2>

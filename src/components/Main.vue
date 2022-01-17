@@ -66,7 +66,8 @@ export default {
 
         > .banner{
             background-color: #f0f4fa;
-            padding: 375px;
+            padding: 0 375px;
+            height: 600px;
         }
     }
 </style>
