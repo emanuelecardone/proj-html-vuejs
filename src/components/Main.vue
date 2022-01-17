@@ -1,7 +1,7 @@
 <template>
     <main class="mt_80">
         <Start :bannerData="banners.start" />
-        <!-- <Banner :type="'learning'" :content="banners.learning" /> -->
+        <Banner :type="'learning'" :content="banners.learning" />
         <CoursesList class="recent" />
         <Stats />
         <NewsLetter />
@@ -13,7 +13,7 @@
 
 <script>
 import Start from './Start.vue';
-// import Banner from './Banner.vue';
+import Banner from './Banner.vue';
 import CoursesList from './CoursesList.vue';
 import Stats from './Stats.vue';
 import NewsLetter from './NewsLetter.vue';
@@ -24,7 +24,7 @@ export default {
     name: 'Main',
     components: {
         Start,
-        // Banner,
+        Banner,
         CoursesList,
         Stats,
         NewsLetter,
@@ -62,4 +62,11 @@ export default {
 
 <style lang="scss" scoped>
 
+    main{
+
+        > .banner{
+            background-color: #f0f4fa;
+            padding: 375px;
+        }
+    }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <section class="start">
+    <section class="start mb_120">
         <Banner :type="'start'" :content="bannerData" />
         <div class="infos_wrapper d-flex justify-content-between align-items-center mt_60 mb_120">
             <div v-for="info,index in infos" :key="index" class="single_info_wrapper p-4">
