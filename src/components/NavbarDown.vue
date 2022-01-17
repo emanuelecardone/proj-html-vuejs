@@ -22,7 +22,7 @@
             </div>
             <div class="right_section">
                 <a href="#" class="nav-item">
-                     <i class="fas fa-user"></i>
+                     <i class="fas fa-user me-2"></i>
                     Log in
                 </a>
                 <Button :type="'text'" :text="'sign up'" class="mx-4" />
@@ -62,6 +62,7 @@ export default {
                     
                     input{
                         background-color: #e4e8ed;
+                        border: none;
 
                         &::placeholder{
                             color: $tertiary_color;
