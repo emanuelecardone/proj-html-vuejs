@@ -12,7 +12,6 @@
             <div v-if="type === 'start'" class="img_section w_40 h-100">
                 <StartImg :sources="content.imgSrc" />
             </div>
-            <img v-else :src="require('../assets/img/' + content.imgSrc + '.png')" alt="Immagine banner" class="learning_img position-absolute">
         </div>
     </div>
 </template>
@@ -38,6 +37,11 @@ export default {
 
     .banner{
 
+        &.learning{
+            background-image: url('../assets/img/Untitled-1-1-1-1-1.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
         .text_section{
             padding: 100px 0;
             z-index: 2000;

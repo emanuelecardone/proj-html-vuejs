@@ -9,8 +9,8 @@
             </div>
         </div>
         <div class="images_wrapper text-capitalize">
-            <div class="images_wrapper_up d-flex flex-column flex-wrap align-items-start position-relative mb_30">
-                <div v-for="image,index in images.up" :key="index" :class="{'align-self-end': index > 0, 'position-absolute right-0 bottom-0': index === 2}">
+            <div class="images_wrapper_up d-flex flex-column flex-wrap align-items-start mb_30">
+                <div v-for="image,index in images.up" :key="index" :class="{'align-self-end': index > 0, 'mt-4': index === 2}">
                     <img :src="require('../assets/img/' + image.src + '.jpg')" :alt="'Immagine di ' + image.title">
                     <div class="titles_img d-flex justify-content-between align-items-center my-1">
                         <span class="image_title fs-5">{{image.title}}</span>

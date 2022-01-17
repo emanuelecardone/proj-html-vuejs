@@ -1,7 +1,7 @@
 <template>
     <main class="mt_80">
         <Start :bannerData="banners.start" />
-        <Banner :type="'learning'" :content="banners.learning" />
+        <Banner :type="'learning'" :content="banners.learning" class="learning" />
         <CoursesList class="recent" />
         <Stats />
         <NewsLetter />
@@ -51,8 +51,7 @@ export default {
                 learning: {
                     title: 'Limitless learning, more possibilities',
                     text: 'Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.',
-                    btnText: 'read more',
-                    imgSrc: 'Untitled-1-1-1-1-1'
+                    btnText: 'read more'
                 }
             }
         };
@@ -65,6 +64,7 @@ export default {
     main{
 
         > .banner{
+            position: relative;
             background-color: #f0f4fa;
             padding: 0 375px;
             height: 600px;
