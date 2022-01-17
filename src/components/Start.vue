@@ -8,20 +8,20 @@
                 <p class="info_text">{{info.text}}</p>
             </div>
         </div>
-        <div class="images_wrapper text-capitalize">
-            <div class="images_wrapper_up d-flex flex-column flex-wrap align-items-start mb_30">
-                <div v-for="image,index in images.up" :key="index" :class="{'align-self-end': index > 0, 'mt-4': index === 2}">
+        <div class="images_wrapper d-flex justify-content-between text-capitalize">
+            <div class="images_wrapper_left d-flex flex-wrap justify-content-between">
+                <div v-for="image,index in images.left" :key="index" :class="{'align-self-end': index > 0, 'mt-4': index === 2}">
                     <img :src="require('../assets/img/' + image.src + '.jpg')" :alt="'Immagine di ' + image.title">
-                    <div class="titles_img d-flex justify-content-between align-items-center my-1">
+                    <div class="titles_img d-flex justify-content-between align-items-center">
                         <span class="image_title fs-5">{{image.title}}</span>
                         <span class="image_subtitle fs-6">{{image.subtitle}}</span>
                     </div>
                 </div>
             </div>
-            <div class="images_wrapper_down d-flex justify-content-between">
-                <div v-for="image,index in images.down" :key="index">
+            <div class="images_wrapper_right d-flex flex-column justify-content-between">
+                <div v-for="image,index in images.right" :key="index">
                     <img :src="require('../assets/img/' + image.src + '.jpg')" :alt="'Immagine di ' + image.title">
-                    <div class="titles_img d-flex justify-content-between align-items-center my-1">
+                    <div class="titles_img d-flex justify-content-between align-items-center">
                         <span class="image_title fs-5">{{image.title}}</span>
                         <span class="image_subtitle fs-6">{{image.subtitle}}</span>
                     </div>
@@ -64,24 +64,12 @@ export default {
             ],
             // Oggetto con src e test delle immagini
             images: {
-                up: [
+                left: [
                     {
                         src: 'cat_1-770x375',
                         title: 'software development',
                         subtitle: '5 courses'
                     },
-                    {
-                        src: 'cat_2-370x155',
-                        title: 'art',
-                        subtitle: '8 courses'
-                    },
-                    {
-                        src: 'cat_3-370x155',
-                        title: 'material design',
-                        subtitle: '5 courses'
-                    }
-                ],
-                down: [
                     {
                         src: 'cat_4-370x155',
                         title: 'music',
@@ -91,6 +79,18 @@ export default {
                         src: 'cat_5-370x155',
                         title: 'exercise',
                         subtitle: '7 courses'
+                    }
+                ],
+                right: [
+                    {
+                        src: 'cat_2-370x155',
+                        title: 'art',
+                        subtitle: '8 courses'
+                    },
+                    {
+                        src: 'cat_3-370x155',
+                        title: 'material design',
+                        subtitle: '5 courses'
                     },
                     {
                         src: 'cat_6-370x155',
@@ -131,13 +131,13 @@ export default {
             color: $tertiary_color;
         }
     }
+    .images_wrapper_left{
+        max-width: 770px;
+    }
     .image_title{
         color: $primary_color;
     }
     .image_subtitle{
         color: $tertiary_color;
-    }
-    .images_wrapper_up{
-        max-height: 415px;
     }
 </style>
