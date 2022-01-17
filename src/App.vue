@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header :upData="headerData" />
     <Main />
     <Footer />
   </div>
@@ -18,6 +18,16 @@ export default {
     Main,
     Footer
   },
+  data: function(){
+    return {
+      // Oggetto con la struttura dati per l'header superiore (l'header inferiore non ha dati ripetuti, quindi sarà statico)
+      headerData: {
+        links: ['courses', 'zoom', 'pages', 'bundles', 'course formats', 'add course', 'demos'],
+        newIndexes: [1,5],
+        socials: ['twitter', 'instagram', 'behance', 'dribbble', 'flickr', 'git', 'linkedin', 'pinterest']
+      }
+    };
+  }
 };
 </script>
 
