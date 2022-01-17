@@ -35,7 +35,6 @@ export default {
 <style lang="scss" scoped>
 
     .banner{
-        padding: 0 400px;
 
         .text_section{
             padding: 100px 0;
