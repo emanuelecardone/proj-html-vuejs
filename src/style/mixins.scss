@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+/* Buttons (da sistemare meglio) */
+@mixin page_btn {
+    color: white;
+    background-color: $secondary_color;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+}
