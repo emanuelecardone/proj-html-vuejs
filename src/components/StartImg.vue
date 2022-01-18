@@ -16,6 +16,8 @@ export default {
 <style lang="scss" scoped>
 
     .start_img{
+        width: 230px;
+        right: 70px;
 
         > img{
             position: absolute;

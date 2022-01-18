@@ -12,7 +12,7 @@
         </div>
         <div :class="{'col-5': type === 'start', 'col-6': type === 'learning'}">
             <div v-if="type === 'start'" class="img_section w-100 h-100 position-relative">
-                <StartImg :sources="content.imgSrc" class="w-75 h-100" />
+                <StartImg :sources="content.imgSrc" class="h-100" />
             </div>
         </div>
     </div>
