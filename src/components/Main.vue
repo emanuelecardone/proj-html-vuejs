@@ -6,10 +6,10 @@
                 <Banner :type="'learning'" :content="banners.learning" class="learning banner" />
             </div>
         </div>
-        <CoursesList class="recent" />
+        <CoursesList class="recent" :type="'recent'" :cardsData="courses.recent" />
         <Stats />
         <NewsLetter />
-        <CoursesList class="popular" />
+        <CoursesList class="popular" :type="'popular'" />
         <JoinUs />
         <MasterStudy />
     </main>
@@ -57,6 +57,239 @@ export default {
                     text: 'Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.',
                     btnText: 'read more'
                 }
+            },
+            // Oggetto con contenuti di Recent Courses e Popular Courses
+            courses: {
+                recent: [
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'photo-1461749280684-dccba630e2f6-272x161.jpeg',
+                        title: 'apache',
+                        description: 'Web Coding and Apache Basics',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: 'free'
+                        }
+                    },
+                    {   
+                        attribute: 'new',
+                        featured: true,
+                        image: 'cat_2-272x161.jpg',
+                        title: 'art',
+                        description: 'Real Things Art Painting by Jason Ni',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: 60,
+                            current: 45
+                        }
+                    },
+                    {   
+                        attribute: 'hot',
+                        featured: false,
+                        image: 'course-preview-272x161.jpg',
+                        title: 'software development',
+                        description: 'Basic of Masterstudy',
+                        time: {
+                            value: false,
+                            amount: null
+                        },
+                        rate: {
+                            value: true,
+                            amount: 5
+                        },
+                        price: {
+                            previous: null,
+                            current: 'free'
+                        }
+                    },
+                    {   
+                        attribute: 'special',
+                        featured: false,
+                        image: 'photo-1496307042754-b4aa456c4a2d-272x161.jpeg',
+                        title: 'electronic',
+                        description: 'How to be a DJ? Make Electronic Music',
+                        time: {
+                            value: false,
+                            amount: null
+                        },
+                        rate: {
+                            value: true,
+                            amount: 5
+                        },
+                        price: {
+                            previous: 59,
+                            current: 49
+                        }
+                    },
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'photo-1416339134316-0e91dc9ded92-scaled-272x161.jpeg',
+                        title: 'communication',
+                        description: 'Design Instruments for Communication',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: null
+                        }
+                    },
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'cathryn-lavery-67852-unsplash-272x161.jpg',
+                        title: 'art',
+                        description: 'Make your Concept Right and Beautiful',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: 70
+                        }
+                    },
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'photo-1475452779376-caebfb988090-272x161.jpeg',
+                        title: 'bicycling',
+                        description: 'Road Bike Manual or How to Be a Champion.',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: 20
+                        }
+                    },
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'cristian-grecu-762012-unsplash-min-scaled-272x161.jpg',
+                        title: 'documentary',
+                        description: 'How to Make Beautiful Landscape photos?',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: 60
+                        }
+                    },
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'landscape-272x161.jpg',
+                        title: 'art',
+                        description: 'Let\'s paint Van Gogh\'s Starry Night',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: 79
+                        }
+                    },
+                    {   
+                        attribute: 'special',
+                        featured: false,
+                        image: '12345-1-272x161.png',
+                        title: 'nvidia',
+                        description: 'Nvidia and UE4 Technologies Practice',
+                        time: {
+                            value: false,
+                            amount: null
+                        },
+                        rate: {
+                            value: true,
+                            amount: 5
+                        },
+                        price: {
+                            previous: null,
+                            current: 'free'
+                        }
+                    },
+                    {   
+                        attribute: 'special',
+                        featured: false,
+                        image: 'jakob-owens-198234-unsplash-min-1-272x161.png',
+                        title: 'art',
+                        description: 'How to Work with Legendary RED camera?',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: 'free'
+                        }
+                    },
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'promo_tf-272x161.jpg',
+                        title: 'software development',
+                        description: 'MasterStudy Mobile LMS App',
+                        time: {
+                            value: true,
+                            amount: 2
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: 'free'
+                        }
+                    }
+                ]
             }
         };
     }

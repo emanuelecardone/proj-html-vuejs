@@ -1,4 +1,6 @@
 <template>
+    <!-- Sezione start: richiama inizialmente il componente banner passandogli i dati da stampare (testo e immagine)
+    Poi usa il sistema row e cols per stampare le info e le immagini -->
     <section class="start px_100 mb_120">
         <div class="container">
             <div class="row row-cols-1">
