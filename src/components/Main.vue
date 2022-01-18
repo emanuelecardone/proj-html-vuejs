@@ -7,7 +7,7 @@
             </div>
         </div>
         <CoursesList class="recent pb_120" :type="'recent'" :details="coursesDetails.recent" :cardsData="coursesCards.recent" />
-        <Stats />
+        <Stats :statsData="stats" />
         <NewsLetter />
         <!-- <CoursesList class="popular" :type="'popular'" /> -->
         <JoinUs />
@@ -299,7 +299,26 @@ export default {
                         }
                     }
                 ]
-            }
+            },
+            // Array con i testi per la sezione stats
+            stats: [
+                {
+                    amount: 2000,
+                    item: 'students'
+                },
+                {
+                    amount: 950,
+                    item: 'courses'
+                },
+                {
+                    amount: 1600,
+                    item: 'hours video'
+                },
+                {
+                    amount: 150,
+                    item: 'countries reached'
+                }
+            ]
         };
     }
 }
