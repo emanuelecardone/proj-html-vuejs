@@ -1,9 +1,9 @@
 <template>
     <main>
         <Start :bannerData="banners.start" />
-        <div class="second_banner w-100">
+        <div class="second_banner w-100 px_100">
             <div class="container">
-                <Banner :type="'learning'" :content="banners.learning" class="learning px_100 banner" />
+                <Banner :type="'learning'" :content="banners.learning" class="learning banner" />
             </div>
         </div>
         <CoursesList class="recent" />
