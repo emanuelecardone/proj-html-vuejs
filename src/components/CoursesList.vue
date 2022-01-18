@@ -2,11 +2,13 @@
     <section class="courses_list mt_100">
         <div class="container-fluid">
             <div class="row row-cols-1 flex-column gy-5">
+                <!-- Col titolo -->
                 <div class="col">
                     <div class="titles_section w-100">
                         <h2 class="text-center">{{details.title}}</h2>
                     </div>
                 </div>
+                <!-- Col links / titolo secondario -->
                 <div class="col">
                     <div v-if="type === 'recent'" class="links_section w-100 d-flex justify-content-center align-items-center">
                         <ul class="links_list p-0 d-flex justify-content-between align-items-center">
@@ -17,11 +19,18 @@
                     </div>
                     <h5 v-else>test</h5>
                 </div>
+                <!-- Col cards -->
                 <div class="col">
                     <div class="row row-cols-6 gx-2 gy-5">
                         <div class="col" v-for="card,index in cardsData" :key="index">
                             <Card :infos="card" />
                         </div>
+                    </div>
+                </div>
+                <!-- Col button/arrows -->
+                <div class="col">
+                    <div class="bottom_section d-flex justify-content-center align-items-center">
+                        <Button v-if="type === 'recent'" :type="'text'" :text="'show all'" />
                     </div>
                 </div>
             </div>
@@ -31,11 +40,13 @@
 
 <script>
 import Card from './Card.vue';
+import Button from './Button.vue';
 
 export default {
     name: 'CoursesList',
     components: {
-        Card
+        Card,
+        Button
     },
     props: {
         type: String,
