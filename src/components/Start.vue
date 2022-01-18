@@ -22,10 +22,10 @@
         </div>
         <div class="images_wrapper text-capitalize">
             <div class="container">
-                <div class="row row-cols-1">
+                <div class="row row-cols-1 gy-3">
                     <div class="col">
-                        <div class="images_wrapper_up w-100 h-100 d-flex justify-content-between align-items-center">
-                            <div class="big_image_wrapper w_65 h-100">
+                        <div class="row">
+                            <div class="col-8">
                                 <div class="single_image">
                                     <img :src="images.up.development.src" alt="Immagine sviluppo software">
                                     <div class="single_image_description">
@@ -34,33 +34,40 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="small_images_wrapper w_30 h-100 d-flex flex-column justify-content-between align-items-center">
-                                <div class="single_image">
-                                    <img :src="images.up.art.src" alt="Immagine art">
-                                    <div class="single_image_description">
-                                        <span class="image_title">{{images.up.art.title}}</span>
-                                        <span class="image_subtitle">{{images.up.art.subtitle}}</span>
+                            <div class="col-4">
+                                <div class="small_images_wrapper w-100 h-100 d-flex flex-column justify-content-between align-items-center">
+                                    <div class="single_image">
+                                        <img :src="images.up.art.src" alt="Immagine art">
+                                        <div class="single_image_description">
+                                            <span class="image_title">{{images.up.art.title}}</span>
+                                            <span class="image_subtitle">{{images.up.art.subtitle}}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="single_image">
-                                    <img :src="images.up.design.src" alt="Immagine design">
-                                    <div class="single_image_description">
-                                        <span class="image_title">{{images.up.design.title}}</span>
-                                        <span class="image_subtitle">{{images.up.design.subtitle}}</span>
+                                    <div class="single_image">
+                                        <img :src="images.up.design.src" alt="Immagine design">
+                                        <div class="single_image_description">
+                                            <span class="image_title">{{images.up.design.title}}</span>
+                                            <span class="image_subtitle">{{images.up.design.subtitle}}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="images_wrapper_down w-100 h-100 d-flex justify-content-between align-items-center">
-                            <div class="single_image w_30" v-for="image,index in images.down" :key="index">
-                                <img :src="require('../assets/img/' + image.src + '.jpg')" alt="Immagine design">
-                                <div class="single_image_description">
-                                    <span class="image_title">{{image.title}}</span>
-                                    <span class="image_subtitle">{{image.subtitle}}</span>
+                        <div class="row row-cols-3">
+                            <div class="col" v-for="image,index in images.down" :key="index">
+                                <div class="single_image">
+                                    <img :src="require('../assets/img/' + image.src + '.jpg')" alt="Immagine design">
+                                    <div class="single_image_description">
+                                        <span class="image_title">{{image.title}}</span>
+                                        <span class="image_subtitle">{{image.subtitle}}</span>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="images_wrapper_down w-100 h-100 d-flex justify-content-between align-items-center">
+                            
                         </div>
                     </div>
                 </div>
@@ -167,6 +174,7 @@ export default {
     .images_wrapper{
 
         .single_image{
+            width: 100%;
 
             &_description{
                 display: flex;
