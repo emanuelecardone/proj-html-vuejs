@@ -4,7 +4,7 @@
   <div id="app">
     <Header :upData="headerData" />
     <Main />
-    <Footer />
+    <Footer :data="footerData" />
     <ToolsBox />
   </div>
 </template>
@@ -35,8 +35,10 @@ export default {
       footerData: {
         about: {
           name: 'about',
-          text1: 'Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education.',
-          text2: 'Developed by StylemixThemes.',
+          text1: ' is Education WordPress theme featured by Learning Management System (LMS) for online education.',
+          text1Evidence: 'Masterstudy',
+          text2: 'Developed by ',
+          text2Evidence: 'StylemixThemes',
           icons: ['facebook', 'twitter', 'instagram']
         },
         contact: {
@@ -56,18 +58,21 @@ export default {
         },
         pages: {
           name: 'pages',
-          pages: ['blog', 'home', 'shortcodes', 'courses', 'membership a...', 'typography']
+          pagesNames: {
+            left: ['blog', 'home', 'shortcodes'],
+            right: ['courses', 'membership a...', 'typography']
+          }
         },
         blog: {
           name: 'blog',
           blogs: [
             {
-              image: 'photo-1517520287167-4bbf64a00d66-122x120',
+              image: 'photo-1517520287167-4bbf64a00d66-75x75',
               text: 'Our main target is to "Developing Yourself as a Leader"',
               date: 'August 9, 2018'
             },
             {
-              image: 'photo-1490376840453-5f616fbebe5b-122x120',
+              image: 'photo-1490376840453-5f616fbebe5b-75x75',
               text: 'Those Other College Expenses You Aren\'t Thinking About',
               date: 'June 3, 2015'
             }
