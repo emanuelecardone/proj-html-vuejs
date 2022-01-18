@@ -5,6 +5,7 @@
     <Header :upData="headerData" />
     <Main />
     <Footer />
+    <ToolsBox />
   </div>
 </template>
 
@@ -12,13 +13,15 @@
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
 import Footer from './components/Footer.vue';
+import ToolsBox from './components/ToolsBox.vue';
 
 export default {
   name: "App",
   components: {
     Header,
     Main,
-    Footer
+    Footer,
+    ToolsBox
   },
   data: function(){
     return {

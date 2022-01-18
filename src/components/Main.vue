@@ -6,7 +6,7 @@
                 <Banner :type="'learning'" :content="banners.learning" class="learning banner" />
             </div>
         </div>
-        <CoursesList class="recent" :type="'recent'" :details="coursesDetails.recent" :cardsData="coursesCards.recent" />
+        <CoursesList class="recent pb_120" :type="'recent'" :details="coursesDetails.recent" :cardsData="coursesCards.recent" />
         <Stats />
         <NewsLetter />
         <!-- <CoursesList class="popular" :type="'popular'" /> -->
@@ -308,7 +308,6 @@ export default {
 <style lang="scss" scoped>
 
     main{
-
         .second_banner{
             background-image: url("../assets/img/Untitled-1-1-1-1-1.png");
             background-size: 103% 100%;

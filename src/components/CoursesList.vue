@@ -21,7 +21,7 @@
                 </div>
                 <!-- Col cards -->
                 <div class="col">
-                    <div class="row row-cols-6 gx-2 gy-5">
+                    <div class="row row-cols-6 gx-4 gy-5">
                         <div class="col" v-for="card,index in cardsData" :key="index">
                             <Card :infos="card" />
                         </div>
@@ -60,7 +60,8 @@ export default {
 @import '../style/variables.scss';
 
     .courses_list{
-        padding: 0 $min_padding_x;
+        padding-left: $min_padding_x;
+        padding-right: $min_padding_x;
 
         .links_section{
 

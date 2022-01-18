@@ -74,7 +74,7 @@ export default {
     
     /* Altezza card */
     .courses_card{
-        height: 350px;
+        height: 400px;
 
         /* Div principali della card */
         > div{
@@ -93,7 +93,7 @@ export default {
                 .type_mark{
                     top: .5rem;
                     right: .5rem;
-                    padding: .2rem .4rem;
+                    padding: .25rem .5rem;
                     border-radius: 5px;
                     font-size: 12px;
                     color: white;
@@ -126,7 +126,7 @@ export default {
             &.card_infos{
                 border: 1px solid $tertiary_color;
                 border-top: none;
-                padding: .5rem;
+                padding: 1rem;
 
                 /* Bordo per il div con featured */
                 &.featured{
@@ -139,26 +139,26 @@ export default {
 
                     /* Varie modifiche agli span */
                     &.category_name{
-                        font-size: 12px;
+                        font-size: 15px;
                         color: darken(#e4e8ed, 10%);
                     }
                     &.description{
-                        font-size: 15px;
+                        font-size: 17.5px;
                         color: $primary_color;
                     }
                     &.bottom_left_text{
-                        font-size: 12px;
+                        font-size: 15px;
                         color: $primary_color;
                     }
                     &.previous_price_text{
-                        font-size: 12px;
+                        font-size: 15px;
                         color: darken(#e4e8ed, 10%);
                         text-decoration: line-through;
                         bottom: 1rem;
                         right: 0;
                     }
                     &.bottom_right_text{
-                        font-size: 15px;
+                        font-size: 17.5px;
                         color: $primary_color;
                         font-weight: bold;
                     }
@@ -168,7 +168,7 @@ export default {
                     width: calc(100% - 1rem);
                     top: 50%;
                     transform: translateY(-50%);
-                    color: darken(#e4e8ed, 30%);
+                    color: darken(#e4e8ed, 40%);
                 }
             }
         }
