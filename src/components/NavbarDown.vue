@@ -1,31 +1,31 @@
 <template>
-    <nav class="navbar down justify-content-between align-items-center px_100">
+    <nav class="navbar down justify-content-between align-items-center">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="../assets/img/MasterStudy_logo.svg" alt="Logo">
+            <a class="navbar-brand me-0" href="#">
+                <img src="../assets/img/MasterStudy_logo.svg" alt="Logo" class="w_125p">
             </a>
-            <div class="middle_section_1 w_40">
-                <i class="fas fa-bars me-1"></i>
-                <span class="text-uppercase me-3 fs_15">category</span>
-                <input type="search" class="form-control form-control-md h_40p rounded-0" placeholder="Search courses">
-                <Button :type="'icon'" class="rounded-0" />
+            <div class="middle_section_1">
+                <i class="fas fa-bars"></i>
+                <span class="text-uppercase mx-1 fs_15">category</span>
+                <input type="search" class="form-control form-control-md h-100 rounded-0" placeholder="Search courses">
+                <Button :type="'icon'" class="rounded-0 h-100" />
             </div>
             <div class="middle_section_2" id="navbarSupportedContent">
-                <a href="#" class="nav-item me-4">
-                    <i class="fas fa-bullhorn me-2"></i>
+                <a href="#" class="nav-item me-1">
+                    <i class="fas fa-bullhorn"></i>
                     Become an Instructor
                 </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-briefcase me-2"></i>
+                <a href="#" class="nav-item ms-1">
+                    <i class="fas fa-briefcase"></i>
                     For Enterprise
                 </a>
             </div>
             <div class="right_section">
                 <a href="#" class="nav-item">
-                     <i class="fas fa-user me-2"></i>
+                     <i class="fas fa-user"></i>
                     Log in
                 </a>
-                <Button :type="'text'" :text="'sign up'" class="mx-4" />
+                <Button :type="'text'" :text="'sign up'" class="mx-1" />
                 <i class="far fa-bookmark fs-4"></i>
             </div>
         </div>
@@ -61,6 +61,7 @@ export default {
                     color: $tertiary_color;
                     
                     input{
+                        max-width: 160px;
                         background-color: #e4e8ed;
                         border: none;
 
@@ -81,12 +82,6 @@ export default {
                     color: $secondary_color;
                 }
             }
-        }
-
-        .btn{
-            display: block;
-            height: 40px;
-            padding: 0 25px;
         }
     }
 </style>

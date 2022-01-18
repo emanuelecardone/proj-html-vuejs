@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar up justify-content-between align-items-center px_100">
+    <nav class="navbar up justify-content-between align-items-center">
         <div class="container-fluid">
 
             <a class="nav-item d-flex justify-content-center align-items-center" href="#">
@@ -18,7 +18,7 @@
                     </li>
                 </ul>
                 <!-- Socials -->
-                <ul class="socials_list flex-row navbar-nav ms-5 me-auto mb-2 mb-lg-0">
+                <ul class="socials_list flex-row navbar-nav ms-4 me-auto mb-2 mb-lg-0">
                     <li v-for="social,index in thisData.socials" :key="index" class="nav-item">
                         <a class="nav-link text-capitalize" href="#">
                             <i :class="'fab fa-' + social"></i>
@@ -55,7 +55,7 @@ export default {
             display: flex;
 
             &.links_list{
-            gap: 1.75rem;
+            gap: 1rem;
 
                 li{
 
@@ -73,7 +73,7 @@ export default {
                 }
             }
             &.socials_list{
-                gap: 1rem;
+                gap: .5rem;
 
                 a{
                     color: $primary_color;

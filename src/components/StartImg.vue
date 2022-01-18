@@ -1,5 +1,5 @@
 <template>
-    <div class="start_img w-100 h-100 position-relative">
+    <div class="start_img position-absolute">
         <img v-for="image,index in sources" :key="index" :src="require('../assets/img/' + image + '.png')" :alt="'Immagine di ' + image" :class="image">
     </div>
 </template>
@@ -21,30 +21,36 @@ export default {
             position: absolute;
 
             &.base{
+                width: 160%;
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
             }
             &.moon{
-                top: 25%;
-                left: 20%;
+                width: 42px;
+                top: 30%;
+                left: 28%;
                 filter: grayscale(100%) brightness(1.1);
             }
             &.book1{
-                top: 25%;
-                left: 70%;
+                width: 130px;
+                top: 26%;
+                left: 100%;
             }
             &.book2{
+                width: 130px;
                 top: 58%;
-                left: 40%;
+                left: 60%;
             }
             &.bubblespeech{
-                top: 15%;
-                left: 92.5%;
+                width: 40px;
+                top: 18%;
+                left: 135%;
             }
             &.magnifier{
-                top: 67%;
-                left: 85%;
+                width: 45px;
+                top: 63%;
+                left: 123%;
             }
         }
     }

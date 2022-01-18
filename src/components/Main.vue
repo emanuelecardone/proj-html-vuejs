@@ -1,7 +1,11 @@
 <template>
-    <main class="mt_80">
+    <main>
         <Start :bannerData="banners.start" />
-        <Banner :type="'learning'" :content="banners.learning" class="learning" />
+        <div class="second_banner w-100">
+            <div class="container">
+                <Banner :type="'learning'" :content="banners.learning" class="learning px_100 banner" />
+            </div>
+        </div>
         <CoursesList class="recent" />
         <Stats />
         <NewsLetter />
@@ -63,11 +67,9 @@ export default {
 
     main{
 
-        > .banner{
-            position: relative;
-            background-color: #f0f4fa;
-            padding: 0 375px;
-            height: 600px;
+        .second_banner{
+            background-image: url("../assets/img/Untitled-1-1-1-1-1.png");
+            background-size: 103% 100%;
         }
     }
 </style>

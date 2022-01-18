@@ -1,16 +1,18 @@
 <template>
-    <div class="banner w-100">
-        <div class="banner_subwrapper w-100 h-100 d-flex justify-content-center align-items-center position-relative">
-            <div class="text_section d-flex flex-column align-items-start" :class="{'w_60': type === 'start', 'w-50 learning position-absolute': type === 'learning'}">
+    <div class="row">
+        <div :class="{'col-7': type === 'start', 'col-6': type === 'learning'}">
+            <div class="text_section w-100 d-flex flex-column align-items-start">
                 <h1 v-if="type === 'start'">{{content.title}}</h1>
                 <h2 v-else class="fs_40">{{content.title}}</h2>
-                <p class="my-5 fs_30">
+                <p class="my-4 fs_20">
                     {{content.text}}
                 </p>
                 <Button :type="'text'" :text="content.btnText" />
             </div>
-            <div v-if="type === 'start'" class="img_section h-100">
-                <StartImg :sources="content.imgSrc" />
+        </div>
+        <div :class="{'col-5': type === 'start', 'col-6': type === 'learning'}">
+            <div v-if="type === 'start'" class="img_section w-100 h-100 position-relative">
+                <StartImg :sources="content.imgSrc" class="w-75 h-100" />
             </div>
         </div>
     </div>
@@ -34,41 +36,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-    .banner{
-
-        &.learning{
-            background-image: url('../assets/img/Untitled-1-1-1-1-1.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-        .text_section{
-            padding: 100px 0;
-            z-index: 2000;
-
-            h1{
-                font-size: 70px;
-            }
-
-            &.learning{
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-        .img_section{
-            width: 603px;
-            
-            img{
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-            }
-            .learning_img{
-                top: 0;
-                left: 0;
-                z-index: 1000;
-            }
-        }
+    .text_section{
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 </style>

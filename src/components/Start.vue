@@ -1,29 +1,67 @@
 <template>
-    <section class="start mb_120">
-        <Banner :type="'start'" :content="bannerData" />
-        <div class="infos_wrapper d-flex justify-content-between align-items-center mt_60 mb_120">
-            <div v-for="info,index in infos" :key="index" class="single_info_wrapper p-4">
-                <i :class="'info_icon fs_50 fas fa-' + info.icon"></i>
-                <h6 class="info_title my-4">{{info.title}}</h6>
-                <p class="info_text">{{info.text}}</p>
+    <section class="start px_100 mb_120">
+        <div class="container">
+            <div class="row row-cols-1">
+                <div class="col">
+                    <Banner :type="'start'" :content="bannerData" />
+                </div>
             </div>
         </div>
-        <div class="images_wrapper d-flex justify-content-between text-capitalize">
-            <div class="images_wrapper_left d-flex flex-wrap justify-content-between">
-                <div v-for="image,index in images.left" :key="index" :class="{'align-self-end': index > 0, 'mt-4': index === 2}">
-                    <img :src="require('../assets/img/' + image.src + '.jpg')" :alt="'Immagine di ' + image.title">
-                    <div class="titles_img d-flex justify-content-between align-items-center">
-                        <span class="image_title fs-5">{{image.title}}</span>
-                        <span class="image_subtitle fs-6">{{image.subtitle}}</span>
+        <div class="infos_wrapper mt_60 mb_120">
+            <div class="container">
+                <div class="row row-cols-3">
+                    <div class="col" v-for="info,index in infos" :key="index" >
+                        <div  class="single_info_wrapper w-100 h-100 p-4">
+                            <i :class="'info_icon fs_50 fas fa-' + info.icon"></i>
+                            <h6 class="info_title my-4">{{info.title}}</h6>
+                            <p class="info_text">{{info.text}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="images_wrapper_right d-flex flex-column justify-content-between">
-                <div v-for="image,index in images.right" :key="index">
-                    <img :src="require('../assets/img/' + image.src + '.jpg')" :alt="'Immagine di ' + image.title">
-                    <div class="titles_img d-flex justify-content-between align-items-center">
-                        <span class="image_title fs-5">{{image.title}}</span>
-                        <span class="image_subtitle fs-6">{{image.subtitle}}</span>
+        </div>
+        <div class="images_wrapper text-capitalize">
+            <div class="container">
+                <div class="row row-cols-1">
+                    <div class="col">
+                        <div class="images_wrapper_up w-100 h-100 d-flex justify-content-between align-items-center">
+                            <div class="big_image_wrapper w_65 h-100">
+                                <div class="single_image">
+                                    <img :src="images.up.development.src" alt="Immagine sviluppo software">
+                                    <div class="single_image_description">
+                                        <span class="image_title">{{images.up.development.title}}</span>
+                                        <span class="image_subtitle">{{images.up.development.subtitle}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small_images_wrapper w_30 h-100 d-flex flex-column justify-content-between align-items-center">
+                                <div class="single_image">
+                                    <img :src="images.up.art.src" alt="Immagine art">
+                                    <div class="single_image_description">
+                                        <span class="image_title">{{images.up.art.title}}</span>
+                                        <span class="image_subtitle">{{images.up.art.subtitle}}</span>
+                                    </div>
+                                </div>
+                                <div class="single_image">
+                                    <img :src="images.up.design.src" alt="Immagine design">
+                                    <div class="single_image_description">
+                                        <span class="image_title">{{images.up.design.title}}</span>
+                                        <span class="image_subtitle">{{images.up.design.subtitle}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="images_wrapper_down w-100 h-100 d-flex justify-content-between align-items-center">
+                            <div class="single_image w_30" v-for="image,index in images.down" :key="index">
+                                <img :src="require('../assets/img/' + image.src + '.jpg')" alt="Immagine design">
+                                <div class="single_image_description">
+                                    <span class="image_title">{{image.title}}</span>
+                                    <span class="image_subtitle">{{image.subtitle}}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,12 +102,26 @@ export default {
             ],
             // Oggetto con src e test delle immagini
             images: {
-                left: [
-                    {
-                        src: 'cat_1-770x375',
+                // Up è un oggetto data la diversa dimensione delle immagini
+                up: {
+                    development: {
+                        src: require('../assets/img/cat_1-770x375.jpg'),
                         title: 'software development',
                         subtitle: '5 courses'
                     },
+                    art: {
+                        src: require('../assets/img/cat_2-370x155.jpg'),
+                        title: 'art',
+                        subtitle: '8 courses'
+                    },
+                    design: {
+                        src: require('../assets/img/cat_3-370x155.jpg'),
+                        title: 'material design',
+                        subtitle: '5 courses'
+                    }
+                },
+                // Down va bene come array in quanto posso ciclarlo
+                down: [
                     {
                         src: 'cat_4-370x155',
                         title: 'music',
@@ -79,18 +131,6 @@ export default {
                         src: 'cat_5-370x155',
                         title: 'exercise',
                         subtitle: '7 courses'
-                    }
-                ],
-                right: [
-                    {
-                        src: 'cat_2-370x155',
-                        title: 'art',
-                        subtitle: '8 courses'
-                    },
-                    {
-                        src: 'cat_3-370x155',
-                        title: 'material design',
-                        subtitle: '5 courses'
                     },
                     {
                         src: 'cat_6-370x155',
@@ -107,17 +147,9 @@ export default {
 <style lang="scss" scoped>
 @import '../style/variables.scss';
 
-    .start{
-        padding: 0 375px;
-
-        .banner{
-            height: 500px;
-        }
-    }
     .single_info_wrapper{
         background-color: #f2f6fb;
-        width: 370px;
-        height: 250px;
+        width: 30%;
         display: flex;
         flex-direction: column;
 
@@ -131,13 +163,26 @@ export default {
             color: $tertiary_color;
         }
     }
-    .images_wrapper_left{
-        max-width: 770px;
+
+    .images_wrapper{
+
+        .single_image{
+
+            &_description{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        img{
+            width: 100%;
+        }
+        .image_title{
+            color: $primary_color;
+        }
+        .image_subtitle{
+            color: $tertiary_color;
+        }
     }
-    .image_title{
-        color: $primary_color;
-    }
-    .image_subtitle{
-        color: $tertiary_color;
-    }
+    
 </style>
