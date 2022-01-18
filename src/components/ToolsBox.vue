@@ -23,7 +23,7 @@ export default {
     .toolsbox{
         position: fixed;
         right: 0;
-        top: calc(50vh - 60px);
+        top: calc(50vh - 125px);
         box-shadow: -2.5px 5px 10px 1px $primary_color;
         width: 60px;
         height: 250px;

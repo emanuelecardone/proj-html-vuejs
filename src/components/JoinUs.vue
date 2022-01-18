@@ -1,7 +1,7 @@
 <template>
     <section class="join_us">
         <div class="container-fluid">
-            <div class="row row-cols-2 gx-3">
+            <div class="row row-cols-2 gx-4">
                 <div class="col" v-for="content,index in contents" :key="index">
                     <div class="box w-100 d-flex py_70">
                         <div class="image_box h-100 mx_50">
