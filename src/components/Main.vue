@@ -6,10 +6,10 @@
                 <Banner :type="'learning'" :content="banners.learning" class="learning banner" />
             </div>
         </div>
-        <CoursesList class="recent" :type="'recent'" :cardsData="courses.recent" />
+        <CoursesList class="recent" :type="'recent'" :details="coursesDetails.recent" :cardsData="coursesCards.recent" />
         <Stats />
         <NewsLetter />
-        <CoursesList class="popular" :type="'popular'" />
+        <!-- <CoursesList class="popular" :type="'popular'" /> -->
         <JoinUs />
         <MasterStudy />
     </main>
@@ -58,14 +58,21 @@ export default {
                     btnText: 'read more'
                 }
             },
-            // Oggetto con contenuti di Recent Courses e Popular Courses
-            courses: {
+            // Oggetto con contenuti esterni alle cards di Recent Courses e Popular Courses
+            coursesDetails: {
+                recent: {
+                    title: 'Recent courses',
+                    categories: ['all categories', 'art', 'exercise', 'material design', 'music', 'photography', 'software development']
+                }
+            },
+            // Oggetto con contenuti delle cards di Recent Courses e Popular Courses
+            coursesCards: {
                 recent: [
                     {   
                         attribute: 'normal',
                         featured: false,
                         image: 'photo-1461749280684-dccba630e2f6-272x161.jpeg',
-                        title: 'apache',
+                        category: 'apache',
                         description: 'Web Coding and Apache Basics',
                         time: {
                             value: true,
@@ -84,7 +91,7 @@ export default {
                         attribute: 'new',
                         featured: true,
                         image: 'cat_2-272x161.jpg',
-                        title: 'art',
+                        category: 'art',
                         description: 'Real Things Art Painting by Jason Ni',
                         time: {
                             value: true,
@@ -103,7 +110,7 @@ export default {
                         attribute: 'hot',
                         featured: false,
                         image: 'course-preview-272x161.jpg',
-                        title: 'software development',
+                        category: 'software development',
                         description: 'Basic of Masterstudy',
                         time: {
                             value: false,
@@ -122,7 +129,7 @@ export default {
                         attribute: 'special',
                         featured: false,
                         image: 'photo-1496307042754-b4aa456c4a2d-272x161.jpeg',
-                        title: 'electronic',
+                        category: 'electronic',
                         description: 'How to be a DJ? Make Electronic Music',
                         time: {
                             value: false,
@@ -141,7 +148,7 @@ export default {
                         attribute: 'normal',
                         featured: false,
                         image: 'photo-1416339134316-0e91dc9ded92-scaled-272x161.jpeg',
-                        title: 'communication',
+                        category: 'communication',
                         description: 'Design Instruments for Communication',
                         time: {
                             value: true,
@@ -160,7 +167,7 @@ export default {
                         attribute: 'normal',
                         featured: false,
                         image: 'cathryn-lavery-67852-unsplash-272x161.jpg',
-                        title: 'art',
+                        category: 'art',
                         description: 'Make your Concept Right and Beautiful',
                         time: {
                             value: true,
@@ -179,7 +186,7 @@ export default {
                         attribute: 'normal',
                         featured: false,
                         image: 'photo-1475452779376-caebfb988090-272x161.jpeg',
-                        title: 'bicycling',
+                        category: 'bicycling',
                         description: 'Road Bike Manual or How to Be a Champion.',
                         time: {
                             value: true,
@@ -198,7 +205,7 @@ export default {
                         attribute: 'normal',
                         featured: false,
                         image: 'cristian-grecu-762012-unsplash-min-scaled-272x161.jpg',
-                        title: 'documentary',
+                        category: 'documentary',
                         description: 'How to Make Beautiful Landscape photos?',
                         time: {
                             value: true,
@@ -217,7 +224,7 @@ export default {
                         attribute: 'normal',
                         featured: false,
                         image: 'landscape-272x161.jpg',
-                        title: 'art',
+                        category: 'art',
                         description: 'Let\'s paint Van Gogh\'s Starry Night',
                         time: {
                             value: true,
@@ -236,7 +243,7 @@ export default {
                         attribute: 'special',
                         featured: false,
                         image: '12345-1-272x161.png',
-                        title: 'nvidia',
+                        category: 'nvidia',
                         description: 'Nvidia and UE4 Technologies Practice',
                         time: {
                             value: false,
@@ -255,7 +262,7 @@ export default {
                         attribute: 'special',
                         featured: false,
                         image: 'jakob-owens-198234-unsplash-min-1-272x161.png',
-                        title: 'art',
+                        category: 'art',
                         description: 'How to Work with Legendary RED camera?',
                         time: {
                             value: true,
@@ -274,7 +281,7 @@ export default {
                         attribute: 'normal',
                         featured: false,
                         image: 'promo_tf-272x161.jpg',
-                        title: 'software development',
+                        category: 'software development',
                         description: 'MasterStudy Mobile LMS App',
                         time: {
                             value: true,
