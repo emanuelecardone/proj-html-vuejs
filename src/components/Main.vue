@@ -9,7 +9,7 @@
         <CoursesList class="recent pb_120" :type="'recent'" :details="coursesDetails.recent" :cardsData="coursesCards.recent" />
         <Stats :statsData="stats" />
         <NewsLetter />
-        <!-- <CoursesList class="popular" :type="'popular'" /> -->
+        <CoursesList class="popular pt_120 pb_70 mt-0" :type="'popular'" :details="coursesDetails.popular" :cardsData="coursesCards.popular" />
         <JoinUs />
         <MasterStudy />
     </main>
@@ -64,6 +64,10 @@ export default {
                     title: 'Recent courses',
                     categories: ['all categories', 'art', 'exercise', 'material design', 'music', 'photography', 'software development'],
                     selected: 0
+                },
+                popular: {
+                    title: 'Popular courses',
+                    subtitle: 'Discover our most popular courses for self learning'
                 }
             },
             // Oggetto con contenuti delle cards di Recent Courses e Popular Courses
@@ -298,6 +302,122 @@ export default {
                             current: 'free'
                         }
                     }
+                ],
+                popular: [
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'photo-1461749280684-dccba630e2f6-272x161.jpeg',
+                        category: 'apache',
+                        description: 'Web Coding and Apache Basics',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: 'free'
+                        }
+                    },
+                    {   
+                        attribute: 'new',
+                        featured: true,
+                        image: 'cat_2-272x161.jpg',
+                        category: 'art',
+                        description: 'Real Things Art Painting by Jason Ni',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: 60,
+                            current: 45
+                        }
+                    },
+                    {   
+                        attribute: 'hot',
+                        featured: false,
+                        image: 'course-preview-272x161.jpg',
+                        category: 'software development',
+                        description: 'Basic of Masterstudy',
+                        time: {
+                            value: false,
+                            amount: null
+                        },
+                        rate: {
+                            value: true,
+                            amount: 5
+                        },
+                        price: {
+                            previous: null,
+                            current: 'free'
+                        }
+                    },
+                    {   
+                        attribute: 'special',
+                        featured: false,
+                        image: 'photo-1496307042754-b4aa456c4a2d-272x161.jpeg',
+                        category: 'electronic',
+                        description: 'How to be a DJ? Make Electronic Music',
+                        time: {
+                            value: false,
+                            amount: null
+                        },
+                        rate: {
+                            value: true,
+                            amount: 5
+                        },
+                        price: {
+                            previous: 59,
+                            current: 49
+                        }
+                    },
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'photo-1416339134316-0e91dc9ded92-scaled-272x161.jpeg',
+                        category: 'communication',
+                        description: 'Design Instruments for Communication',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: null
+                        }
+                    },
+                    {   
+                        attribute: 'normal',
+                        featured: false,
+                        image: 'cathryn-lavery-67852-unsplash-272x161.jpg',
+                        category: 'art',
+                        description: 'Make your Concept Right and Beautiful',
+                        time: {
+                            value: true,
+                            amount: 6
+                        },
+                        rate: {
+                            value: false,
+                            amount: null
+                        },
+                        price: {
+                            previous: null,
+                            current: 70
+                        }
+                    },
                 ]
             },
             // Array con i testi per la sezione stats
@@ -330,6 +450,9 @@ export default {
         .second_banner{
             background-image: url("../assets/img/Untitled-1-1-1-1-1.png");
             background-size: 103% 100%;
+        }
+        .courses_list.popular{
+            background-color: #f0f4fa;
         }
     }
 </style>

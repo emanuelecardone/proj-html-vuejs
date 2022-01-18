@@ -154,7 +154,7 @@ export default {
                         font-size: 15px;
                         color: darken(#e4e8ed, 10%);
                         text-decoration: line-through;
-                        bottom: 1rem;
+                        bottom: 1.2rem;
                         right: 0;
                     }
                     &.bottom_right_text{

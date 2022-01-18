@@ -6,18 +6,18 @@
                 <div class="col">
                     <div class="titles_section w-100">
                         <h2 class="text-center">{{details.title}}</h2>
+                        <h5 v-if="type === 'popular'" class="popular_subtitle text-center">{{details.subtitle}}</h5>
                     </div>
                 </div>
-                <!-- Col links / titolo secondario -->
-                <div class="col">
-                    <div v-if="type === 'recent'" class="links_section w-100 d-flex justify-content-center align-items-center">
+                <!-- Col links -->
+                <div v-if="type === 'recent'" class="col">
+                    <div class="links_section w-100 d-flex justify-content-center align-items-center">
                         <ul class="links_list p-0 d-flex justify-content-between align-items-center">
                             <li v-for="category,index in details.categories" :key="index">
                                 <a class="single_category_link text-capitalize" href="#" :class="{'selected': index === details.selected}">{{category}}</a>
                             </li>
                         </ul>
                     </div>
-                    <h5 v-else>test</h5>
                 </div>
                 <!-- Col cards -->
                 <div class="col">
@@ -31,6 +31,14 @@
                 <div class="col">
                     <div class="bottom_section d-flex justify-content-center align-items-center">
                         <Button v-if="type === 'recent'" :type="'text'" :text="'show all'" />
+                        <div v-else class="arrows_wrapper d-flex">
+                            <div class="arrows_wrapper_left">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="arrows_wrapper_right">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,6 +71,11 @@ export default {
         padding-left: $min_padding_x;
         padding-right: $min_padding_x;
 
+        .titles_section{
+            .popular_subtitle{
+                color: $tertiary_color;
+            }
+        }
         .links_section{
 
             .links_list{
@@ -78,6 +91,18 @@ export default {
                         border-radius: 50rem;
                     }
                 }
+            }
+        }
+        .arrows_wrapper{
+            color: $tertiary_color;
+
+            > div{
+                border: 1px solid $tertiary_color;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }
