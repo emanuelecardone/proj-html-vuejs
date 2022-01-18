@@ -11,7 +11,7 @@
                     <div v-if="type === 'recent'" class="links_section w-100 d-flex justify-content-center align-items-center">
                         <ul class="links_list p-0 d-flex justify-content-between align-items-center">
                             <li v-for="category,index in details.categories" :key="index">
-                                <a class="single_category_link text-capitalize" href="#">{{category}}</a>
+                                <a class="single_category_link text-capitalize" href="#" :class="{'selected': index === details.selected}">{{category}}</a>
                             </li>
                         </ul>
                     </div>
@@ -57,6 +57,13 @@ export default {
 
                 .single_category_link{
                     color: $secondary_color;
+
+                    &.selected{
+                        color: $tertiary_color;
+                        background-color: #e4e8ed;
+                        padding: .5rem 1rem;
+                        border-radius: 50rem;
+                    }
                 }
             }
         }

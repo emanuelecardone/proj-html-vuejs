@@ -62,7 +62,8 @@ export default {
             coursesDetails: {
                 recent: {
                     title: 'Recent courses',
-                    categories: ['all categories', 'art', 'exercise', 'material design', 'music', 'photography', 'software development']
+                    categories: ['all categories', 'art', 'exercise', 'material design', 'music', 'photography', 'software development'],
+                    selected: 0
                 }
             },
             // Oggetto con contenuti delle cards di Recent Courses e Popular Courses
