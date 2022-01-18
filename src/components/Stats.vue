@@ -1,4 +1,5 @@
-<template>
+<template> 
+    <!-- La sezione Stats (o We Proud) stamperà con delle col i dati sui corsi, il background è posizionato in basso ed ha sia background color che image -->
     <section class="stats">
         <div class="container">
             <div class="row flex-column">
