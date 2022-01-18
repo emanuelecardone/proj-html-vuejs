@@ -46,6 +46,7 @@ export default {
         
         height: 70px;
         border-bottom: 3px solid #e4e8ed;
+        padding: 0 $min_padding_x;
 
         a{
             color: $tertiary_color;

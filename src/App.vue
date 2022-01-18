@@ -1,4 +1,6 @@
 <template>
+  <!--IMPORTANTE: 
+  Per questioni di spazio e dopo 2 ticket a riguardo riprodurrò il layout per una dimensione di 1920 px di larghezza (come da screenshot) -->
   <div id="app">
     <Header :upData="headerData" />
     <Main />

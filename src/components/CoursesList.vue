@@ -60,6 +60,7 @@ export default {
 @import '../style/variables.scss';
 
     .courses_list{
+        padding: 0 $min_padding_x;
 
         .links_section{
 

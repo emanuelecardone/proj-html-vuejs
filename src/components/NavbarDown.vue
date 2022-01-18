@@ -2,20 +2,22 @@
     <nav class="navbar down justify-content-between align-items-center">
         <div class="container-fluid">
             <a class="navbar-brand me-0" href="#">
-                <img src="../assets/img/MasterStudy_logo.svg" alt="Logo" class="w_125p">
+                <img src="../assets/img/MasterStudy_logo.svg" alt="Logo">
             </a>
-            <div class="middle_section_1">
-                <i class="fas fa-bars"></i>
-                <span class="text-uppercase mx-1 fs_15">category</span>
-                <input type="search" class="form-control form-control-md h-100 rounded-0" placeholder="Search courses">
-                <Button :type="'icon'" class="rounded-0 h-100" />
+            <div class="middle_section_1 flex-grow-1">
+                <span class="text-uppercase mx-4 fs_15 d-flex align-items-center">
+                    <i class="fas fa-bars me-1"></i>    
+                    category
+                </span>
+                <input type="search" class="form-control form-control-lg rounded-0" placeholder="Search courses">
+                <Button :type="'icon'" class="rounded-0 h-100 py-3 px-4" />
             </div>
             <div class="middle_section_2" id="navbarSupportedContent">
                 <a href="#" class="nav-item me-1">
                     <i class="fas fa-bullhorn"></i>
                     Become an Instructor
                 </a>
-                <a href="#" class="nav-item ms-1">
+                <a href="#" class="nav-item ms-4">
                     <i class="fas fa-briefcase"></i>
                     For Enterprise
                 </a>
@@ -25,7 +27,7 @@
                      <i class="fas fa-user"></i>
                     Log in
                 </a>
-                <Button :type="'text'" :text="'sign up'" class="mx-1" />
+                <Button :type="'text'" :text="'sign up'" class="mx-4" />
                 <i class="far fa-bookmark fs-4"></i>
             </div>
         </div>
@@ -47,10 +49,11 @@ export default {
 @import '../style/variables.scss';
 
     .navbar.down{
-
         height: 90px;
+        padding: 0 $min_padding_x;
         
         .container-fluid{
+            gap: 4rem;
 
             > div{
                 display: flex;
@@ -61,12 +64,13 @@ export default {
                     color: $tertiary_color;
                     
                     input{
-                        max-width: 160px;
                         background-color: #e4e8ed;
                         border: none;
 
                         &::placeholder{
                             color: $tertiary_color;
+                            font-size: 15px;
+                            font-weight: bold;
                         }
                     }
                 }
