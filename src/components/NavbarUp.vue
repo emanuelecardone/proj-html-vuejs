@@ -18,7 +18,7 @@
                     </li>
                 </ul>
                 <!-- Socials -->
-                <ul class="socials_list flex-row navbar-nav ms-4 me-auto mb-2 mb-lg-0">
+                <ul class="socials_list flex-row navbar-nav ms-5 me-auto mb-2 mb-lg-0">
                     <li v-for="social,index in thisData.socials" :key="index" class="nav-item">
                         <a class="nav-link text-capitalize" href="#">
                             <i :class="'fab fa-' + social"></i>
@@ -56,7 +56,7 @@ export default {
             display: flex;
 
             &.links_list{
-            gap: 1rem;
+            gap: 1.5rem;
 
                 li{
 
@@ -69,12 +69,12 @@ export default {
                         padding: .1rem .4rem;
                         position: absolute;
                         bottom: 80%;
-                        left: 50%;
+                        left: 75%;
                     }
                 }
             }
             &.socials_list{
-                gap: .5rem;
+                gap: .75rem;
 
                 a{
                     color: $primary_color;
