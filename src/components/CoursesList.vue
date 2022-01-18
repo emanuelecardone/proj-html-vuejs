@@ -18,7 +18,7 @@
                     <h5 v-else>test</h5>
                 </div>
                 <div class="col">
-                    <div class="row row-cols-6 gy-5">
+                    <div class="row row-cols-6 gx-2 gy-5">
                         <div class="col" v-for="card,index in cardsData" :key="index">
                             <Card :infos="card" />
                         </div>

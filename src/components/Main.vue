@@ -67,6 +67,7 @@ export default {
                 }
             },
             // Oggetto con contenuti delle cards di Recent Courses e Popular Courses
+            // Alcune immagini hanno jpeg, altre jpg altre png perciò scriverò anche la parte finale nella source
             coursesCards: {
                 recent: [
                     {   
