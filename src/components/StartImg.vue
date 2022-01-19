@@ -1,4 +1,7 @@
 <template>
+    <!-- StartImg è un "bricolage" di immagini messe una sopra l'altra a partire da un'immagine base (per riprodurre la stessa immagine dello screenshot)
+    Ogni parte mancante dell'immagine viene posizionata con position absolute, anche StartImg stessa ha position absolute essendo posizionata nel banner con l'effetto di sbordare
+    Vengono stampate con v-for tutte le immagini le cui sources vengono prese come props -->
     <div class="start_img position-absolute">
         <img v-for="image,index in sources" :key="index" :src="require('../assets/img/' + image + '.png')" :alt="'Immagine di ' + image" :class="image">
     </div>
@@ -16,43 +19,42 @@ export default {
 <style lang="scss" scoped>
 
     .start_img{
-        width: 230px;
-        right: 70px;
+        width: 100%;
+        right: 0;
 
         > img{
             position: absolute;
 
+            /* Modifica size e position delle immagini (base + secondarie) */
             &.base{
-                width: 160%;
+                width: 700px;
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
             }
             &.moon{
-                width: 42px;
-                top: 30%;
-                left: 28%;
+                top: 22%;
+                left: 25%;
                 filter: grayscale(100%) brightness(1.1);
             }
             &.book1{
-                width: 130px;
-                top: 26%;
-                left: 100%;
+                width: 220px;
+                top: 18%;
+                left: 82%;
             }
             &.book2{
-                width: 130px;
-                top: 58%;
-                left: 60%;
+                width: 260px;
+                top: 60%;
+                left: 48%;
             }
             &.bubblespeech{
-                width: 40px;
-                top: 18%;
-                left: 135%;
+                top: 8%;
+                left: 108%;
             }
             &.magnifier{
-                width: 45px;
-                top: 63%;
-                left: 123%;
+                width: 80px;
+                top: 71%;
+                left: 102%;
             }
         }
     }

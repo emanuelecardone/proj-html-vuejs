@@ -1,4 +1,5 @@
 <template>
+    <!-- L'header importa 2 navbar e passa alla nav superiore il contenuto da stampare proveniente da App -->
     <header>
         <NavbarUp :thisData="upData" />
         <NavbarDown />

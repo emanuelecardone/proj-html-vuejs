@@ -1,4 +1,6 @@
 <template>
+    <!-- La Navbar inferiore di bootstrap contiene il logo della pagina, una form search con un button più dei link e lo spazio login
+    l'unico div che ha flexgrow 1 è quello della input search -->
     <nav class="navbar down justify-content-between align-items-center">
         <div class="container-fluid">
             <a class="navbar-brand me-0" href="#">

@@ -44,6 +44,12 @@ export default {
         background-size: 100% 50%;
         background-position-y: 100%;
 
+        h2{
+            font-size: 50px;
+        }
+        p{
+            font-size: 17.5px;
+        }
         .col:not(.col:last-child){
             border-right: 1px solid $tertiary_color;
         }

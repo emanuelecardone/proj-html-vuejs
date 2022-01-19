@@ -1,4 +1,6 @@
 <template>
+    <!-- La Navbar superiore ha una scelta per la lingua e due liste di links sulla destra. Prende le informazioni da stampare 
+    tramite props in arrivo da App->Header -->
     <nav class="navbar up justify-content-between align-items-center">
         <div class="container-fluid">
 

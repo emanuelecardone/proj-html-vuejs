@@ -1,4 +1,6 @@
 <template>
+    <!-- La sezione CoursesList verrà stampata 2 volte ed essendo entrambe molto simili cambiano pochi dettagli (in base alla props type)
+    Le altre 2 props sono il contenuto secondario come titoli etc, e il contenuto delle cards da stampare  -->
     <section class="courses_list mt_100">
         <div class="container-fluid">
             <div class="row row-cols-1 flex-column gy-5">
@@ -72,6 +74,10 @@ export default {
         padding-right: $min_padding_x;
 
         .titles_section{
+
+            h2{
+                font-size: 50px;
+            }
             .popular_subtitle{
                 color: $tertiary_color;
             }
@@ -103,6 +109,12 @@ export default {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                &:hover{
+                    background-color: #457992;
+                    color: white;
+                    cursor: pointer;
+                }
             }
         }
     }

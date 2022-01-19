@@ -1,8 +1,10 @@
 <template>
+    <!-- Il Main ha vari sottocomponenti ed è il componente che gestisce tutti i sottocomponenti appunto del main, contiente quasi tutti i data delle sottosezioni e le passa come props -->
     <main>
         <Start :bannerData="banners.start" />
         <div class="second_banner w-100">
             <div class="container">
+                <!-- Da ricordare che banner è una row quindi lo metto come direct child di container -->
                 <Banner :type="'learning'" :content="banners.learning" class="learning banner" />
             </div>
         </div>
@@ -71,7 +73,16 @@ export default {
                 }
             },
             // Oggetto con contenuti delle cards di Recent Courses e Popular Courses
-            // Alcune immagini hanno jpeg, altre jpg altre png perciò scriverò anche la parte finale nella source
+            // Keys:
+            //      -Attribute: inquadra se è una card normale o se ha l'attributo hot special etc, così da stampare la targhetta in alto a destra
+            //      -Featured: per la targhetta in alto a sinistra diagonale, che viene stampata se featured è true
+            //      -Image: src dell'immagine da stampare. Alcune immagini hanno jpeg, altre jpg altre png perciò scriverò anche la parte finale nella source
+            //      -Category: categoria della card da stampare nel body della card
+            //      -Description: descrizione della card da stampare nel suo body
+            //      -Time/Rate: la card ha una o l'altra, stampa quella che ha true su "value". Poi prende il numero del voto/tempo da "amount"
+            //      -Price: prezzo della card diviso in previous (per stampare lo sconto se previous non è null) e il prezzo attuale (current)
+            // 
+            // Ho scelto di scrivere anche il content di popular nonostante sia solo i primi 6 di recent, dato che è un array che può cambiare nel tempo e in questo modo si può modificare facilmente
             coursesCards: {
                 recent: [
                     {   

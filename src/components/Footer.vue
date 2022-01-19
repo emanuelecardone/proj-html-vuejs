@@ -1,5 +1,6 @@
 <template>
-    <!-- Le col del footer non verranno ciclate in quanto ogni col ha un tipo di contenuto diverso dagli altri, quindi devo lavorare su ogni col singola -->
+    <!-- Le col del footer non verranno ciclate in quanto ogni col ha un tipo di contenuto diverso dagli altri, quindi devo lavorare su ogni col singola
+    Le informazioni (props data) da stampare in pagina saranno quindi divise in 4 sotto oggetti, ognuno diverso dall'altro in base al contenuto da stampare -->
     <footer class="pt_70 pb_50">
         <div class="container">
             <div class="row row-cols-4 gx-5">
@@ -62,7 +63,7 @@
                                 <img :src="require('../assets/img/' + blog.image + '.jpeg')" alt="Immagine blog" class="w_75p h_75p">
                                 <div class="h-100 blog_text d-flex flex-column justify-content-between">
                                     <span class="main_text fw-bold">{{blog.text}}</span>
-                                    <span class="sub_text">- {{blog.date}}</span>
+                                    <span class="sub_text">-- {{blog.date}}</span>
                                 </div>
                             </div>
                         </div>
@@ -87,6 +88,7 @@ export default {
 
     footer{
 
+        /* Customizzazione delle 4 sezioni (col) */
         .footer_box{
             width: 100%;
             height: 100%;

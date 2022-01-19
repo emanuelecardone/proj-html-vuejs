@@ -1,15 +1,17 @@
 <template>
     <!-- Sezione start: richiama inizialmente il componente banner passandogli i dati da stampare (testo e immagine)
     Poi usa il sistema row e cols per stampare le info e le immagini -->
-    <section class="start mb_120">
+    <section class="start mt_120 mb_120">
         <div class="container">
             <div class="row row-cols-1">
+                <!-- Importo il banner dentro la col (da ricordare che il banner è una row) -->
                 <div class="col">
-                    <Banner :type="'start'" :content="bannerData" />
+                    <Banner :type="'start'" :content="bannerData" class="mb_120" />
                 </div>
             </div>
         </div>
-        <div class="infos_wrapper mt_60 mb_120">
+        <!-- Cards con le info -->
+        <div class="infos_wrapper mb_120">
             <div class="container">
                 <div class="row row-cols-3">
                     <div class="col" v-for="info,index in infos" :key="index" >
@@ -22,6 +24,7 @@
                 </div>
             </div>
         </div>
+        <!-- Sezione con immagini -->
         <div class="images_wrapper text-capitalize">
             <div class="container">
                 <div class="row row-cols-1 gy-3">
@@ -182,6 +185,7 @@ export default {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 10px 0;
             }
         }
         img{

@@ -1,4 +1,6 @@
 <template>
+    <!-- La sezione MasterStudy è l'ultima prima del footer, ha una col-7 con uno sfondo di base, il riquadro bianco ha un effetto vignetta creato con 
+    un secondo div triangle, il div è reso un triangolo col trucco di width/height 0 e la dimensione dei bordi (3 dei quali con colore trasparente) -->
     <section class="master_study w-100 d-flex align-items-center py_50">
         <div class="container">
             <div class="row">
@@ -35,6 +37,9 @@ export default {
             padding: 70px $min_padding_x 100px;
             background-color: white;
 
+            h3{
+                font-size: 35px;
+            }
             .title,
             .name,
             .profession{
