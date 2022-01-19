@@ -46,10 +46,14 @@
                         <h5 class="title">{{data.pages.name}}</h5>
                         <div class="content w-100 d-flex justify-content-between">
                             <ul class="left">
-                                <li v-for="page,index in data.pages.pagesNames.left" :key="index" class="text-capitalize mb-2">{{page}}</li>
+                                <li v-for="page,index in data.pages.pagesNames.left" :key="index" class="text-capitalize mb-2">
+                                    <a href="#" class="page_link">{{page}}</a>
+                                </li>
                             </ul>
                             <ul class="right">
-                                <li v-for="page,index in data.pages.pagesNames.right" :key="index" class="text-capitalize mb-2">{{page}}</li>
+                                <li v-for="page,index in data.pages.pagesNames.right" :key="index" class="text-capitalize mb-2">
+                                    <a href="#" class="page_link">{{page}}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -135,6 +139,10 @@ export default {
                 ul{
                     list-style-type: circle;
                     padding: 0;
+
+                    .page_link{
+                        color: inherit;
+                    }
                 }
             }
             &.blog{

@@ -33,6 +33,7 @@ export default {
         .tool_icon{
             font-size: 20px;
             color: $primary_color;
+            cursor: pointer;
         }
     }
 </style>

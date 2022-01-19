@@ -109,6 +109,7 @@ export default {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                background-color: white;
 
                 &:hover{
                     background-color: #457992;

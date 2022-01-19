@@ -164,6 +164,7 @@ export default {
         width: 30%;
         display: flex;
         flex-direction: column;
+        cursor: pointer;
 
         .info_icon{
             color: $secondary_color;

@@ -75,6 +75,7 @@ export default {
     /* Altezza card */
     .courses_card{
         height: 400px;
+        cursor: pointer;
 
         /* Div principali della card */
         > div{
@@ -127,6 +128,7 @@ export default {
                 border: 1px solid $tertiary_color;
                 border-top: none;
                 padding: 1rem;
+                background-color: white;
 
                 /* Bordo per il div con featured */
                 &.featured{
